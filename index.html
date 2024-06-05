@@ -43,7 +43,7 @@
 <!--  -->
 
 <!-- only on dekstop -->
-    <div class="nav-links-desktop white-color">
+    <div class="nav-links-desktop white-color only-homepage">
       <a href="index.html">Home</a>
       <a href="shop.html">Merchandise Shop</a>
       <a href="contact.html">Contact</a>
@@ -62,7 +62,8 @@
     <div class="hero white-color">
       <h1>UNLEASHING GOLDEN VICTORIES!</h1>
       <p>Experience the Power and Precision of the Golden Fighters as We Dominate the E-Sports Arena.</p>
-      <button type="button" name="button" class="white-color">Explore the Team</button>
+      <a href="#scroll-to-team">
+      <button type="button" name="button" class="white-color">Explore the Team</button></a>
     </div>
   </div>
 </section>
@@ -70,50 +71,51 @@
 <!-- team members section -->
 <div class="container"> <!-- container for centering -->
 <section>
-  <h2>OUR TEAM</h2>
+  <h2 id="scroll-to-team">OUR TEAM</h2>
 
-  <div class="team-members">
-    <div class="team-member">
-      <img src="images/teammember1.png" alt="">
-    </div>
-    <div class="team-member-description">
-      <h3 class="team-members-name">ALEX “BLAZE" JOHNSON</h3>
-      <p>Role: Team Captain / DPS Specialist</p>
-    </div>
+  <div class="team-members-wrapper">
+    <div class="team-members">
+      <div class="team-member">
+        <img src="images/teammember1.png" alt="">
+      </div>
+      <div class="team-member-description">
+        <h3 class="team-members-name">ALEX “BLAZE" JOHNSON</h3>
+        <p>Role: Team Captain / DPS Specialist</p>
+      </div>
 
-    <div class="team-member-description description-right">
-      <h3 class="team-members-name">SARAH "SHADOW" WILLIAMS</h3>
-      <p>Role: Stealth Operations / Support</p>
-    </div>
-    <div class="team-member">
-      <img src="images/teammember2.png" alt="">
-    </div>
+      <div class="team-member-description description-right">
+        <h3 class="team-members-name">SARAH "SHADOW" WILLIAMS</h3>
+        <p>Role: Stealth Operations / Support</p>
+      </div>
+      <div class="team-member">
+        <img src="images/teammember2.png" alt="">
+      </div>
 
-    <div class="team-member">
-      <img src="images/teammember3.png" alt="">
-    </div>
-    <div class="team-member-description">
-      <h3 class="team-members-name">KEVIN "VORTEX" SMITH</h3>
-      <p>Role: Tank / Defense Expert</p>
-    </div>
+      <div class="team-member">
+        <img src="images/teammember3.png" alt="">
+      </div>
+      <div class="team-member-description">
+        <h3 class="team-members-name">KEVIN "VORTEX" SMITH</h3>
+        <p>Role: Tank / Defense Expert</p>
+      </div>
 
-    <div class="team-member-description description-right">
-      <h3 class="team-members-name">jAKE "ROGUE" MARTINEZ</h3>
-      <p>Role: Scout / Flex Player</p>
-    </div>
-    <div class="team-member">
-      <img src="images/teammember4.png" alt="">
-    </div>
+      <div class="team-member-description description-right">
+        <h3 class="team-members-name">jAKE "ROGUE" MARTINEZ</h3>
+        <p>Role: Scout / Flex Player</p>
+      </div>
+      <div class="team-member">
+        <img src="images/teammember4.png" alt="">
+      </div>
 
-    <div class="team-member">
-      <img src="images/teammember5.png" alt="">
-    </div>
-    <div class="team-member-description">
-      <h3 class="team-members-name">RYAN "FALCON" THOMSPON</h3>
-      <p>Role: Sniper / Long-Range Specialist</p>
+      <div class="team-member">
+        <img src="images/teammember5.png" alt="">
+      </div>
+      <div class="team-member-description">
+        <h3 class="team-members-name">RYAN "FALCON" THOMSPON</h3>
+        <p>Role: Sniper / Long-Range Specialist</p>
+      </div>
     </div>
   </div>
-
   <div class="line"></div>
 
 </section>
@@ -122,7 +124,9 @@
 <!-- games team competes in section -->
 <div class="container">
 <section>
-  <h2 class="square">GAMES WE COMPETE IN</h2>
+  <div class="center-title">
+    <h2 class="highlighted-title">GAMES WE COMPETE IN</h2>
+  </div>
 
   <div class="games-compete">
     <div class="game-wrapper">
@@ -130,7 +134,7 @@
       <p class="games-p lol">The team has consistently ranked in the top tiers of regional tournaments, showcasing exceptional teamwork and strategic prowess. With multiple championship titles under their belt, the Golden Fighters are a force to be reckoned with in the highly competitive world of League of Legends.</p>
     </div>
     <div class="game-wrapper">
-      <h3>COUNTER-STRIKE: GLOBAL OFFENSIVE</h3>
+      <h3>COUNTER-STRIKE</h3>
       <p class="games-p counter-strike">Known for their precise aim and tactical coordination, the team has secured numerous victories in both online and offline tournaments. With a track record of dominating in regional and international competitions, the Golden Fighters continue to solidify their position as one of the top CS teams in the scene.</p>
     </div>
     <div class="game-wrapper">
@@ -174,7 +178,7 @@
 <!-- slider section -->
 <div class="container">
   <section class="slider-wrapper">
-    <h2 class="square">EXPLORE OUR BESTSELLING MERCHANDISE</h2>
+    <h2 class="highlighted-title merch-title">EXPLORE OUR BESTSELLING MERCHANDISE</h2>
     <div class="slider">
       <div class="slide">
         <img src="images/merchandise-mouse.png" alt="">

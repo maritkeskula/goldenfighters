@@ -36,13 +36,14 @@ p, h1, h2, h3, h4, h5, h6 {
   --color4: #FFF9E8;
   --fontsize-p: 28pt;
   --fontsize-p-small: 26pt;
-  --fontsize-p-big: 48pt;
+  --fontsize-p-desktop: 14pt;
 }
 html, body {
   font-family: "Teachers", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 p, a, button {
   font-size: var(--fontsize-p);
@@ -71,20 +72,13 @@ h2 {
   text-decoration: underline;
   text-decoration-color: var(--color1);
 }
-h2.square { /* titles with squares */
-  text-decoration: none;
-  /* background: linear-gradient(180deg,
-       rgba(0,0,0,0) calc(50% - 1px),
-       rgba(255, 215, 0, 1) calc(50%),
-       rgba(255, 215, 0, 1) calc(50% + 1px)); */
-}
 h3 {
   font-size: 32pt;
   line-height: 1.2;
 }
 button {
   padding: 1.5rem 5rem;
-  border: none;
+  border: 2px solid transparent;
 }
   /* center containers */
 section, nav, footer {
@@ -259,6 +253,21 @@ img.nav-wish {
   padding: 5rem 0;
   padding-bottom: 3rem;
 }
+.highlighted-title {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+.highlighted-title::after {
+  content: '';
+  position: absolute;
+  top: .6em;
+  left: .7em;
+  width: 100%;
+  background-color: var(--color1);
+  z-index: -1;
+  padding: 0.5em 0;
+}
 .games-p {
   padding: 2rem;
 }
@@ -298,6 +307,10 @@ img.nav-wish {
 }
 /* end tournament results */
 /* popular merchandise */
+.merch-title::after {
+  padding: 1.2em 0;
+  width: 100%;
+}
 .slider-wrapper {
   display: flex;
   justify-content: center;
@@ -495,20 +508,31 @@ button.filter-btn, button.sort-btn {
 .detail-price {
   margin-top: 3rem;
 }
+.product-title {
+  text-decoration: none;
+}
+.product-title::after {
+  top: 0.4em;
+  left: 0.4em;
+  padding: .4em 0;
+  width: 11.5em;
+}
 .product-description-wrapper {
   margin-top: 5rem;
-}
-.product-description-wrapper h3 {
-  text-decoration: underline;
-  text-decoration-color: var(--color1);
 }
 .hidden-content{
   display: none;
 }
-.detail-background-p {
+.detail-background-p-desktop {
+  display: none;
+}
+p.detail-background-p-phone {
   background-color: var(--color3);
-  padding: 2.5rem 0 ;
+  padding: 2.5rem 1rem;
   margin-top: 3rem;
+}
+.detail-addtocart-and-wish-wrapper-desktop {
+  display: none;
 }
 .detail-addtocart-and-wish {
   margin-top: 3rem;
@@ -574,6 +598,397 @@ label {
 }
 /* end contact page */
 
+/* responsiveness desktop */
+/* nav and hero */
+@media only screen and (min-width: 1000px) {
+  /* global */
+  .container { /* more space edges */
+    width: 70%;
+  }
+  a {
+    text-decoration-thickness: 2px;
+  }
+  p, a, button {
+    font-size: var(--fontsize-p-desktop);
+    color: black;
+  }
+  h1 {
+    font-size: 40pt;
+  }
+  h2 {
+    font-size: 24pt;
+    margin: 3rem 0;
+    text-align: center;
+  }
+  h3 {
+    font-size: 16pt;
+    line-height: 1.2;
+  }
+  button {
+    padding: .75rem 2.5rem;
+    border: 2px solid transparent;
+  }
+  /* end global */
+  /* nav */
+  .navbar {
+    padding: 2.5rem 0;
+  }
+  .phone-menu {   /* not displaying menu icon, instead all links seen */
+    display: none;
+  }
+  .nav-links-desktop {   /* all links seen */
+    display: block;
+  }
+  .nav-links-desktop a:not(:first-child) {
+    margin-left: 1.5rem;
+  }
+  .nav-logo {
+    width: 10rem;
+  }
+  img.nav-shop {
+    width: 3.5rem;
+  }
+  img.nav-wish {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: 2.5rem;
+  }
+  /* end nav */
+  /* hero */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .hero h1 {
+    margin-top: 6rem;
+    width: 30rem;
+  }
+  .hero p {
+    margin-top: 1rem;
+    width: 20rem;
+  }
+  .hero button {
+    margin-top: 8rem;
+  }
+  /* end hero */
+  /* team members */
+  .team-members-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  .team-members {
+    width: 32rem;
+  }
+  .team-member-description p {
+    line-height: 1.5;
+    font-size: var(--fontsize-p-desktop);
+  }
+  /* end team members */
+  /* games competing */
+  .center-title {
+    display: flex;
+    justify-content: center;
+  }
+  .game-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .game-wrapper h3 {
+    margin-bottom: 0.75rem;
+  }
+  .game-wrapper p {
+    padding: 1rem;
+    flex-grow: 1;
+  }
+  .games-compete {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+    padding-bottom: 1.5rem;
+  }
+  .games-p {
+    padding: 1rem;
+  }
+  .lol {
+    border: 2px solid var(--color3);
+    box-shadow: 1.25rem 1.25rem 0 0 var(--color3);
+  }
+  .counter-strike {
+    border: 2px solid var(--color4);
+    box-shadow: 1.25rem 1.25rem 0 0 var(--color4);
+  }
+  .dota2 {
+    border: 2px solid var(--color2);
+    box-shadow: 1.25rem 1.25rem 0 0 var(--color2);
+  }
+  .game-wrapper:not(:first-child) {
+    margin-top: 0;
+  }
+  .line {
+    border-bottom: 1px solid var(--color2);
+    margin: 2.5rem 0;
+    margin-bottom: 0;
+  }
+  /* end games competing */
+  /* tournament results */
+  .tournament-results-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .tournament {
+    padding: 1.5rem;
+  }
+  .tournament p {
+    margin-top: 1.5rem;
+  }
+  .tournament:not(:last-child) {
+    border-bottom: none;
+    border-right: 1px solid var(--color2);
+  }
+  /* end tournament results */
+  /* popular merchandise */
+  .merch-title::after {
+    padding: .6em 0;
+    width: 21em;
+  }
+  .slider {
+    margin-bottom: 2.5rem;
+    width: 35rem;
+  }
+  .slide-content {
+    margin-top: 1rem;
+  }
+  .slide-shop-and-price {
+    margin-top: 1.5rem;
+  }
+  .slide-shop-and-wish img {
+    width: 3rem;
+  }
+  .slide-shop-and-wish img:not(:first-child) {
+    margin-left: 1rem;
+  }
+  a.slider-button {
+    padding: 1rem 2.5rem;
+  }
+  /* end popular merchandise */
+  /* footer */
+  footer {
+    padding: 2.5rem 0;
+    margin-top: 2.5rem;
+  }
+  .footer-logo-and-links {
+    display: grid;
+  	grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-logo-and-links img {
+    width: 10rem;
+  }
+  .footer-a-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer-social-icons {
+    display: flex;
+    margin-top: 1rem;
+  }
+  .footer-a-links a:not(:first-child) {
+    margin-top: .5rem;
+  }
+  .footer-social-icons a {
+    width: 2.5rem;
+    background-size: contain;
+    height: 2.5rem;
+  }
+  .footer-social-icons a:not(:last-child) {
+    margin-right: 1rem;
+  }
+  .footer-contact-info {
+    margin-top: 1rem;
+  }
+  .footer-contact-info h4 {
+    font-size: 14pt;
+    text-decoration: underline;
+    text-decoration-color: var(--color1);
+  }
+  .footer-contact-info p {
+    font-size: 11pt;
+  }
+  .footer-contact-info h4:not(:first-child) {
+    margin-top: .7rem;
+  }
+  .copyright {
+    text-align: center;
+    border-bottom: 1px solid var(--color2);
+    padding: 0.1rem 0;
+  }
+  .copyright p {
+    font-size: 9pt;
+  }
+  .only-homepage a {
+    color: white;
+  }
+  /* end footer */
+  /* end home page */
+  /* shop page */
+  .other-pages a {
+    color: black;
+  }
+  /* filtering */
+  .filters-wrapper {
+    margin: 1.75rem 0;
+  }
+  .filter, .sort {
+    display: flex;
+    align-items: center;
+  }
+  .filter p, .sort p {
+    margin-right: 1.5rem;
+    text-align: left;
+  }
+  .sort {
+    margin-top: 1rem;
+  }
+  .filter button, .sort button {
+    flex-grow: 1;
+    background-color: var(--color4);
+  }
+  .filter button:not(:first-child), .sort button:not(:first-child) {
+    margin-left: 1rem;
+  }
+  button.filter-btn, button.sort-btn {
+    padding: .3rem 4rem;
+  }
+  /* end filtering */
+  /* merchandise gallery */
+  .shop-content-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .shop-shop-and-wish img {
+    width: 2.4rem;
+  }
+  /* end merchandise gallery */
+  /* end shop page */
+  /* detail page */
+  h2.detail-h2-desktop {
+    text-align: left;
+    width: 27rem;
+    margin-left: 10rem;
+  }
+  .merchandise-item-detail{
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin-left: 10rem;
+  }
+  .detail-page-info-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .detail-color-black, .detail-color-white {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .detail-color-white {
+    margin-left: 1rem;
+  }
+  .detail-price {
+    margin-top: 1.5rem;
+  }
+  .product-description-wrapper {
+    margin-top: 0;
+    margin-left: 3rem;
+  }
+  .detail-background-p-phone {
+    display: none;
+  }
+  .detail-background-and-cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .detail-background-p-desktop {
+    display: block;
+    background-color: var(--color3);
+    padding: 1.25rem 1rem;
+    margin-top: 1.5rem;
+  }
+  .detail-addtocart-and-wish-wrapper-phone {
+    display: none;
+  }
+  .detail-addtocart-and-wish-wrapper-desktop {
+    display: block;
+  }
+  .detail-addtocart-and-wish {
+    margin-top: .75rem;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: auto;
+    align-items: center;
+  }
+  .detail-addtocart-and-wish img {
+    margin-left: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  /* end detail page */
+  /* contact page */
+  .center-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .center-p p {
+    width: 30rem;
+  }
+  .form-container-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: .5rem;
+    margin-top: .5rem;
+  }
+  input[type=submit] {
+    padding: .75rem 3.5rem;
+    margin: 1.5rem 0;
+  }
+  .form-container {
+    width: 35rem;
+    margin-top: 1.5rem;
+    padding: .25rem 2.25rem;
+  }
+  .form-container-input {
+    margin-top: 1.5rem;
+  }
+  input {
+    height: 2rem;
+  }
+  label, input, #message, textarea, .form-container-input textarea {
+    font-size: 16pt;
+  }
+  label {
+    margin-top: 1.5rem;
+  }
+  .contactc-info {
+    margin-left: 1.5rem;
+  }
+  h2.contacth2 {
+    margin-bottom: 1.5rem;
+  }
+  /* end contact page */
+}
+/* end nav and hero */
+/* end responsiveness desktop */
+
 /* hover */
 button:hover {
   background-color: white;
@@ -581,7 +996,7 @@ button:hover {
   border: 2px solid var(--color1);
 }
 a:hover {
-
+  text-decoration-color: var(--color2);
 }
 input[type=submit]:hover {
   background-color: white;
