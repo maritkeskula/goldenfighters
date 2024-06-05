@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Golden Fighters Merchandise Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&family=Teachers:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<section class="nav-and-hero nav-and-hero-shop">
+<div class="container"> <!-- container for centering -->
+  <div class="navbar">
+<!-- only on phone -->
+    <div class="phone-menu">
+        <!-- dropdown open and close with js -->
+      <img src="images/menu-black.png" class="menubtn" onclick="openNav()">
+      <div id="phoneNav" class="menu">
+        <img src="images/close.png" class="closebtn" onclick="closeNav()" alt="">
+          <div class="dropdown">
+            <div class="dropdown-links white-color">
+              <a href="index.html">Home</a>
+              <a href="shop.html">Merchandise Shop</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="dropdown-socials">
+              <a id="instagram" href="instagram.com"></a>
+              <a id="facebook" href="facebook.com"></a>
+              <a id="twitter" href="twitter.com"></a>
+            </div>
+            <div class="nav-contact-info white-color">
+              <p>General Inquiries: info@goldenfighters.com</p>
+              <p>Support: support@goldenfighters.com</p>
+              <p>Sales: sales@goldenfighters.com</p>
+              <p>Customer Service: +1 (800) 123-4567</p>
+              <p>Support Hotline: +1 (800) 765-4321</p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--  -->
+
+<!-- only on dekstop -->
+    <div class="nav-links-desktop white-color">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Merchandise Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<!--  -->
+
+    <img class="nav-logo" src="images/logo/logo-full-black.svg" alt="logo">
+
+    <div class="nav-shop-and-wish">
+      <img class="nav-wish" src="images/heart-green.png" alt="">
+      <img class="nav-shop" src="images/nav-shopping-cart.svg" alt="">
+    </div>
+  </div>
+
+<!-- title -->
+    <h2>EXPLORE GOLDEN FIGHTERS OFFICIAL MERCHANDISE</h2>
+  </div>
+</section>
+
+<!-- filters -->
+<div class="container">
+<section>
+  <div class="filters-wrapper">
+    <div class="filter">
+      <p>Filter:</p>
+      <button type="button" name="button" class="filter-btn" data-filter="Gadgets">Gadgets</button>
+      <button type="button" name="button" class="filter-btn" data-filter="Clothes">Clothes</button>
+    </div>
+    <div class="sort">
+      <p>Sort:</p>
+      <button type="button" name="button" class="sort-btn" data-sort="Lowest price">Lowest price</button>
+      <button type="button" name="button" class="sort-btn" data-sort="Highest price">Highest price</button>
+    </div>
+  </div>
+  <!-- items -->
+  <div class="shop-content-container">
+    <div class="merchandise-item">
+      <img src="images/merchandise-mouse.png" alt="">
+      <div class="slide-content">
+        <a href="detail-mouse.html">Experience Precision Gaming with the Golden Fighters Mouse</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>80$</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="merchandise-item">
+      <img src="images/merchandise-headphones.png" alt="">
+      <div class="slide-content">
+        <a href="detail-headphones.html">Immerse Yourself in Victory with Golden Fighters Headphones</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>180$</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="merchandise-item">
+      <img src="images/merchandise-shirt.png" alt="">
+      <div class="slide-content">
+        <a href="detail-shirt.html">Experience the Power of Victory with Our Golden Fighters Shirt</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>50$</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="merchandise-item">
+      <img src="images/merchandise-beanie.png" alt="">
+      <div class="slide-content">
+        <a href="detail-beanie.html">Golden Fighters Embroidered Beanie: Stay Warm in Style</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>40$</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="merchandise-item">
+      <img src="images/merchandise-controller.png" alt="">
+      <div class="slide-content">
+        <a href="detail-controller.html">Golden Fighters Elite Controller</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>200$</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="merchandise-item">
+      <img src="images/merchandise-keyboard.png" alt="">
+      <div class="slide-content">
+        <a href="detail-keyboard.html">Golden Fighters Pro Gaming Keyboard</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish shop-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>90$</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<footer>
+<!-- footer has width100% background color so div container goes inside footer for centering -->
+<div class="container">
+  <div class="footer-logo-and-links">
+    <img src="images/logo/logo-full-black.svg" alt="">
+    <div class="footer-links">
+      <div class="footer-a-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Merchandise shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social-icons">
+        <a id="footer-instagram" href="instagram.com"></a>
+        <a id="footer-facebook" href="facebook.com"></a>
+        <a id="footer-twitter" href="twitter.com"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-contact-info">
+    <h4>EMAIL:</h4>
+    <p>General Inquiries: info@goldenfighters.com<br>
+Support: support@goldenfighters.com<br>
+Sales: sales@goldenfighters.com</p>
+    <h4>PHONE:</h4>
+    <p>Customer Service: +1 (800) 123-4567<br>
+Support Hotline: +1 (800) 765-4321</p>
+  </div>
+</div>
+</footer>
+
+<section class="copyright">
+  <p>© 2024 Golden Fighters. All rights reserved.</p>
+</section>
+
+  </body>
+</html>
+<script src="js.js"></script>

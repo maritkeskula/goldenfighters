@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Golden Fighters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&family=Teachers:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+<section class="nav-and-hero">
+<div class="container"> <!-- container for centering -->
+  <div class="navbar">
+<!-- only on phone -->
+    <div class="phone-menu">
+        <!-- dropdown open and close with js -->
+      <img src="images/menu-white.png" class="menubtn" onclick="openNav()">
+      <div id="phoneNav" class="menu">
+        <img src="images/close.png" class="closebtn" onclick="closeNav()" alt="">
+          <div class="dropdown">
+            <div class="dropdown-links white-color">
+              <a href="index.html">Home</a>
+              <a href="shop.html">Merchandise Shop</a>
+              <a href="contact.html">Contact</a>
+            </div>
+            <div class="dropdown-socials">
+              <a id="instagram" href="instagram.com"></a>
+              <a id="facebook" href="facebook.com"></a>
+              <a id="twitter" href="twitter.com"></a>
+            </div>
+            <div class="nav-contact-info white-color">
+              <p>General Inquiries: info@goldenfighters.com</p>
+              <p>Support: support@goldenfighters.com</p>
+              <p>Sales: sales@goldenfighters.com</p>
+              <p>Customer Service: +1 (800) 123-4567</p>
+              <p>Support Hotline: +1 (800) 765-4321</p>
+            </div>
+          </div>
+        </div>
+      </div>
+<!--  -->
+
+<!-- only on dekstop -->
+    <div class="nav-links-desktop white-color">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Merchandise Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+<!--  -->
+
+    <img class="nav-logo" src="images/logo/logo-full-white.svg" alt="logo">
+
+    <div class="nav-shop-and-wish">
+      <img class="nav-wish" src="images/heart-white.png" alt="">
+      <img class="nav-shop" src="images/nav-shopping-cart.svg" alt="">
+    </div>
+  </div>
+
+<!-- hero -->
+    <div class="hero white-color">
+      <h1>UNLEASHING GOLDEN VICTORIES!</h1>
+      <p>Experience the Power and Precision of the Golden Fighters as We Dominate the E-Sports Arena.</p>
+      <button type="button" name="button" class="white-color">Explore the Team</button>
+    </div>
+  </div>
+</section>
+
+<!-- team members section -->
+<div class="container"> <!-- container for centering -->
+<section>
+  <h2>OUR TEAM</h2>
+
+  <div class="team-members">
+    <div class="team-member">
+      <img src="images/teammember1.png" alt="">
+    </div>
+    <div class="team-member-description">
+      <h3 class="team-members-name">ALEX “BLAZE" JOHNSON</h3>
+      <p>Role: Team Captain / DPS Specialist</p>
+    </div>
+
+    <div class="team-member-description description-right">
+      <h3 class="team-members-name">SARAH "SHADOW" WILLIAMS</h3>
+      <p>Role: Stealth Operations / Support</p>
+    </div>
+    <div class="team-member">
+      <img src="images/teammember2.png" alt="">
+    </div>
+
+    <div class="team-member">
+      <img src="images/teammember3.png" alt="">
+    </div>
+    <div class="team-member-description">
+      <h3 class="team-members-name">KEVIN "VORTEX" SMITH</h3>
+      <p>Role: Tank / Defense Expert</p>
+    </div>
+
+    <div class="team-member-description description-right">
+      <h3 class="team-members-name">jAKE "ROGUE" MARTINEZ</h3>
+      <p>Role: Scout / Flex Player</p>
+    </div>
+    <div class="team-member">
+      <img src="images/teammember4.png" alt="">
+    </div>
+
+    <div class="team-member">
+      <img src="images/teammember5.png" alt="">
+    </div>
+    <div class="team-member-description">
+      <h3 class="team-members-name">RYAN "FALCON" THOMSPON</h3>
+      <p>Role: Sniper / Long-Range Specialist</p>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+</section>
+</div>
+
+<!-- games team competes in section -->
+<div class="container">
+<section>
+  <h2 class="square">GAMES WE COMPETE IN</h2>
+
+  <div class="games-compete">
+    <div class="game-wrapper">
+      <h3>LEAGUE OF LEGENDS</h3>
+      <p class="games-p lol">The team has consistently ranked in the top tiers of regional tournaments, showcasing exceptional teamwork and strategic prowess. With multiple championship titles under their belt, the Golden Fighters are a force to be reckoned with in the highly competitive world of League of Legends.</p>
+    </div>
+    <div class="game-wrapper">
+      <h3>COUNTER-STRIKE: GLOBAL OFFENSIVE</h3>
+      <p class="games-p counter-strike">Known for their precise aim and tactical coordination, the team has secured numerous victories in both online and offline tournaments. With a track record of dominating in regional and international competitions, the Golden Fighters continue to solidify their position as one of the top CS teams in the scene.</p>
+    </div>
+    <div class="game-wrapper">
+      <h3>DOTA 2</h3>
+      <p class="games-p dota2">Renowned for their adaptability and strategic depth, the team has achieved success in various Dota 2 tournaments. From securing top placements in prestigious events to showcasing innovative gameplay strategies, the Golden Fighters have proven themselves as formidable contenders in the ever-evolving landscape of Dota 2 esports.</p>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+</section>
+</div>
+
+<!-- recent tournaments results section -->
+<div class="container">
+<section>
+  <h2>OUR RECENT TOURNAMENT RESULTS:</h2>
+
+  <div class="tournament-results-wrapper">
+    <div class="tournament">
+      <h3>RIOT GAMES LCS SPRING SPLIT:</h3>
+      <p>Golden Fighters placed 3rd overall in the regular season, advancing to the playoffs.
+        <br><br>
+      In the playoffs, the team made it to the semi-finals but narrowly lost to their opponents, finishing in 4th place overall.</p>
+    </div>
+    <div class="tournament">
+      <h3>CS MAJOR CHAMPIONSHIP:</h3>
+      <p>The team reached the quarter-finals but was defeated by a close margin, finishing in the top 8.</p>
+    </div>
+    <div class="tournament">
+      <h3>DOTA 2 INTERNATIONAL INVITATIONAL:</h3>
+      <p>Golden Fighters secured a top 16 placement in the group stage but unfortunately did not advance to the main event knockout stage.</p>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+</section>
+</div>
+
+<!-- slider section -->
+<div class="container">
+  <section class="slider-wrapper">
+    <h2 class="square">EXPLORE OUR BESTSELLING MERCHANDISE</h2>
+    <div class="slider">
+      <div class="slide">
+        <img src="images/merchandise-mouse.png" alt="">
+        <div class="slide-content">
+          <a href="#detail-mouse.html">Experience Precision Gaming with the Golden Fighters Mouse</a>
+          <div class="slide-shop-and-price">
+            <div class="slide-shop-and-wish">
+              <img src="images/nav-shopping-cart.svg" alt="">
+              <img src="images/heart-green.png" alt="">
+            </div>
+            <p>Price <em>80$</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/merchandise-shirt.png" alt="">
+        <div class="slide-content">
+          <a href="#detail-shirt.html">Experience the Power of Victory with Our Golden Fighters Shirt</a>
+          <div class="slide-shop-and-price">
+            <div class="slide-shop-and-wish">
+              <img src="images/nav-shopping-cart.svg" alt="">
+              <img src="images/heart-green.png" alt="">
+            </div>
+            <p>Price <em>50$</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/merchandise-keyboard.png" alt="">
+        <div class="slide-content">
+          <a href="#detail-keyboard.html">Golden Fighters Pro Gaming Keyboard</a>
+          <div class="slide-shop-and-price">
+            <div class="slide-shop-and-wish">
+              <img src="images/nav-shopping-cart.svg" alt="">
+              <img src="images/heart-green.png" alt="">
+            </div>
+            <p>Price <em>90$</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="images/merchandise-beanie.png" alt="">
+        <div class="slide-content">
+          <a href="#detail-beanie.html">Golden Fighters Embroidered Beanie: StayWarm in Style</a>
+        <div class="slide-shop-and-price">
+          <div class="slide-shop-and-wish">
+            <img src="images/nav-shopping-cart.svg"alt="">
+            <img src="images/heart-green.png" alt="">
+          </div>
+          <p>Price <em>40$</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-button" type="button">Explore more</button>
+
+</section>
+</div>
+
+<footer>
+<!-- footer has width100% background color so div container goes inside footer for centering -->
+<div class="container">
+  <div class="footer-logo-and-links">
+    <img src="images/logo/logo-full-black.svg" alt="">
+    <div class="footer-links">
+      <div class="footer-a-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Merchandise shop</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social-icons">
+        <a id="footer-instagram" href="instagram.com"></a>
+        <a id="footer-facebook" href="facebook.com"></a>
+        <a id="footer-twitter" href="twitter.com"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-contact-info">
+    <h4>EMAIL:</h4>
+    <p>General Inquiries: info@goldenfighters.com<br>
+Support: support@goldenfighters.com<br>
+Sales: sales@goldenfighters.com</p>
+    <h4>PHONE:</h4>
+    <p>Customer Service: +1 (800) 123-4567<br>
+Support Hotline: +1 (800) 765-4321</p>
+  </div>
+</div>
+</footer>
+
+<section class="copyright">
+  <p>© 2024 Golden Fighters. All rights reserved.</p>
+</section>
+
+</body>
+</html>
+<script src="js.js"></script>
