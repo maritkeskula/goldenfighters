@@ -345,9 +345,11 @@ em {
   background-color: var(--color1);
   font-style: normal;
 }
-button.slider-button {
+a.slider-button {
   background-color: var(--color3);
   justify-self: center;
+  text-decoration: none;
+  padding: 2rem 5rem;
 }
 /* end popular merchandise */
 /* footer */
@@ -399,6 +401,7 @@ footer {
   margin-top: 2rem;
 }
 .footer-contact-info h4 {
+  font-size: 28pt;
   text-decoration: underline;
   text-decoration-color: var(--color1);
 }
@@ -581,6 +584,8 @@ a:hover {
 
 }
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: white;
+  color: black;
+  border: 2px solid var(--color1);
 }
 /* end hover */
