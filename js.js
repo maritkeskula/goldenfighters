@@ -41,7 +41,7 @@ function filterItems(filter, sort) {
     <div class="merchandise-item">
       <img src="images/merchandise-${item.name}.png" alt="">
       <div class="slide-content">
-        <a href="#detail-${item.name}.html">${item.name}</a>
+        <a href="#detail-${item.name}.html">${item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a>
         <div class="slide-shop-and-price">
           <div class="slide-shop-and-wish shop-shop-and-wish">
             <!-- Add your shopping cart and wishlist icons here -->
@@ -68,5 +68,25 @@ sortButtons.forEach(sort => {
     const sortText = e.target.dataset.sort;
     const filterText = filters[0].dataset.filter; // Get current filter value
     filterItems(filterText, sortText);
+  });
+});
+
+// toggle see more/see less
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementById('toggle-button');
+  const hiddenContent = document.getElementById('hidden-content');
+
+  toggleButton.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the default anchor behavior
+
+    if (toggleButton.getAttribute('data-state') === 'less') {
+      hiddenContent.style.display = 'inline';
+      toggleButton.setAttribute('data-state', 'more');
+      toggleButton.textContent = 'See Less';
+    } else {
+      hiddenContent.style.display = 'none';
+      toggleButton.setAttribute('data-state', 'less');
+      toggleButton.textContent = 'See More';
+    }
   });
 });
