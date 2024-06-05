@@ -342,7 +342,7 @@ img.nav-wish {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 .slide-shop-and-wish {
   display: flex;
@@ -491,6 +491,11 @@ button.filter-btn, button.sort-btn {
 /* end shop page */
 
 /* detail page */
+.slide-shop-and-price-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
 .prev-next {
   display: flex;
   justify-content: space-between;
@@ -516,11 +521,6 @@ button.filter-btn, button.sort-btn {
 }
 .detail-color-black {
   background-color: black;
-}
-.slide-shop-and-price-detail {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
 }
 .detail-color-white {
   background-color: white;
