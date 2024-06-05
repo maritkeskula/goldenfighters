@@ -17,6 +17,10 @@ img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
+img {
+  cursor: pointer;
+
+}
 input, button, textarea, select, a {
   font: inherit;
   -webkit-tap-highlight-color: transparent;
@@ -338,7 +342,7 @@ img.nav-wish {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 .slide-shop-and-wish {
   display: flex;
@@ -363,6 +367,8 @@ a.slider-button {
   justify-self: center;
   text-decoration: none;
   padding: 2rem 5rem;
+  cursor: pointer;
+  border: 2px solid transparent;
 }
 /* end popular merchandise */
 /* footer */
@@ -485,6 +491,17 @@ button.filter-btn, button.sort-btn {
 /* end shop page */
 
 /* detail page */
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.prev-next a {
+  font-size: 5rem;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color1);
+}
 .detail-colors {
   display: flex;
   flex-direction: row;
@@ -499,6 +516,11 @@ button.filter-btn, button.sort-btn {
 }
 .detail-color-black {
   background-color: black;
+}
+.slide-shop-and-price-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .detail-color-white {
   background-color: white;
@@ -553,6 +575,7 @@ p.detail-background-p-phone {
 .detail-cart {
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 .actions {
   display: flex;
@@ -776,9 +799,6 @@ label {
   .slide-content {
     margin-top: 1rem;
   }
-  .slide-shop-and-price {
-    margin-top: 1.5rem;
-  }
   .slide-shop-and-wish img {
     width: 3rem;
   }
@@ -890,6 +910,9 @@ label {
   /* end merchandise gallery */
   /* end shop page */
   /* detail page */
+  .prev-next a {
+    font-size: 2.5rem;
+  }
   h2.detail-h2-desktop {
     text-align: left;
     width: 27rem;
@@ -1016,6 +1039,11 @@ a:hover {
   text-decoration: underline;
   text-decoration-color: var(--color1);
   text-decoration-thickness: 2px;
+}
+a.slider-button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid var(--color1);
 }
 input[type=submit]:hover {
   background-color: white;

@@ -65,7 +65,31 @@
 
 <div class="container detail-page-info-wrapper">
   <div class="merchandise-item merchandise-item-detail">
-    <img src="images/merchandise-shirt.png" alt="">
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <img src="images/merchandise-shirt.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/shirt1.png" style="width:100%">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="images/shirt2.png" style="width:100%">
+      </div>
+
+      <div class="prev-next">
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+    </div>
+
+      <div >
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
       <div class="slide-shop-and-price">
         <div class="detail-colors">
           <div class="detail-color-black"></div>
