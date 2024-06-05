@@ -56,8 +56,6 @@ function filterItems() {
       </div>
     </div>
   `).join('');
-
-  shopContent.innerHTML = itemHTML;
 }
 
 filters.forEach(filter => {
