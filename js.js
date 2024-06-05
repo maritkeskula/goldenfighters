@@ -19,32 +19,37 @@ const items = [
   { name: 'keyboard', category: 'Gadgets', price: 90 }
 ];
 
-function filterItems(filter, sort) {
+let currentFilter = 'All';
+let currentSort = 'None';
+
+function filterItems() {
   const filteredItems = items.filter(item => {
-    if (filter === 'Gadgets') {
+    if (currentFilter === 'Gadgets') {
       return item.category === 'Gadgets';
-    } else if (filter === 'Clothes') {
+    } else if (currentFilter === 'Clothes') {
       return item.category === 'Clothes';
     }
     return true; // Return all items if no filter is selected
   });
 
   filteredItems.sort((a, b) => {
-    if (sort === 'Lowest price') {
+    if (currentSort === 'Lowest price') {
       return a.price - b.price;
-    } else if (sort === 'Highest price') {
+    } else if (currentSort === 'Highest price') {
       return b.price - a.price;
     }
+    return 0;
   });
 
   const itemHTML = filteredItems.map(item => `
     <div class="merchandise-item">
       <img src="images/merchandise-${item.name}.png" alt="">
       <div class="slide-content">
-        <a href="#detail-${item.name}.html">${item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a>
+        <a href="detail-${item.name}.html">${item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a>
         <div class="slide-shop-and-price">
           <div class="slide-shop-and-wish shop-shop-and-wish">
-            <!-- Add your shopping cart and wishlist icons here -->
+            <img src="images/nav-shopping-cart.svg" alt="">
+            <img src="images/heart-green.png" alt="">
           </div>
           <p>Price <em>$${item.price}</em></p>
         </div>
@@ -57,19 +62,21 @@ function filterItems(filter, sort) {
 
 filters.forEach(filter => {
   filter.addEventListener('click', e => {
-    const filterText = e.target.dataset.filter;
-    const sortText = sortButtons[0].dataset.sort; // Get current sort value
-    filterItems(filterText, sortText);
+    currentFilter = e.target.dataset.filter;
+    filterItems();
   });
 });
 
 sortButtons.forEach(sort => {
   sort.addEventListener('click', e => {
-    const sortText = e.target.dataset.sort;
-    const filterText = filters[0].dataset.filter; // Get current filter value
-    filterItems(filterText, sortText);
+    currentSort = e.target.dataset.sort;
+    filterItems();
   });
 });
+
+// Initial rendering
+filterItems();
+
 
 // toggle see more/see less
 document.addEventListener('DOMContentLoaded', () => {
