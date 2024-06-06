@@ -1050,4 +1050,7 @@ input[type=submit]:hover {
   color: black;
   border: 2px solid var(--color1);
 }
+.prev-next a:hover {
+  color: var(--color2);
+}
 /* end hover */
