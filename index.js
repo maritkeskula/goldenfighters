@@ -1,3 +1,11 @@
+// dropdown open and close
+function openNav() {
+document.getElementById("phoneNav").style.width = "100%";
+}
+function closeNav() {
+document.getElementById("phoneNav").style.width = "0%";
+}
+
 // slider
 document.addEventListener('DOMContentLoaded', () => {
   const sliderContainer = document.querySelector('.slider');

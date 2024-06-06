@@ -10,6 +10,7 @@ document.getElementById("phoneNav").style.width = "0%";
 const filters = document.querySelectorAll('.filter-btn');
 const sortButtons = document.querySelectorAll('.sort-btn');
 const shopContent = document.querySelector('.shop-content-container');
+
 const items = [
   { name: 'mouse', category: 'Gadgets', price: 80 },
   { name: 'headphones', category: 'Gadgets', price: 180 },
@@ -22,7 +23,9 @@ const items = [
 let currentFilter = 'All';
 let currentSort = 'None';
 
+// Function to filter and sort items
 function filterItems() {
+
   const filteredItems = items.filter(item => {
     if (currentFilter === 'Gadgets') {
       return item.category === 'Gadgets';
@@ -32,6 +35,7 @@ function filterItems() {
     return true; // Return all items if no filter is selected
   });
 
+  // Sort items based on the current sort order
   filteredItems.sort((a, b) => {
     if (currentSort === 'Lowest price') {
       return a.price - b.price;
@@ -43,19 +47,21 @@ function filterItems() {
 
   const itemHTML = filteredItems.map(item => `
     <div class="merchandise-item">
-      <img src="images/merchandise-${item.name}.png" alt="">
+      <img src="images/merchandise-${item.name}.png" alt="${item.name}">
       <div class="slide-content">
         <a href="detail-${item.name}.html">${item.name.charAt(0).toUpperCase() + item.name.slice(1)}</a>
         <div class="slide-shop-and-price">
           <div class="slide-shop-and-wish shop-shop-and-wish">
-            <img src="images/nav-shopping-cart.svg" alt="">
-            <img src="images/heart-green.png" alt="">
+            <img src="images/nav-shopping-cart.svg" alt="cart">
+            <img src="images/heart-green.png" alt="heart">
           </div>
           <p>Price <em>$${item.price}</em></p>
         </div>
       </div>
     </div>
   `).join('');
+
+  shopContent.innerHTML = itemHTML;
 }
 
 filters.forEach(filter => {
@@ -72,55 +78,5 @@ sortButtons.forEach(sort => {
   });
 });
 
-// Initial rendering
+// Initial rendering of items
 filterItems();
-
-
-// toggle see more/see less
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.getElementById('toggle-button');
-  const hiddenContent = document.getElementById('hidden-content');
-
-  toggleButton.addEventListener('click', (event) => {
-    event.preventDefault(); // Prevent the default anchor behavior
-
-    if (toggleButton.getAttribute('data-state') === 'less') {
-      hiddenContent.style.display = 'inline';
-      toggleButton.setAttribute('data-state', 'more');
-      toggleButton.textContent = 'See Less';
-    } else {
-      hiddenContent.style.display = 'none';
-      toggleButton.setAttribute('data-state', 'less');
-      toggleButton.textContent = 'See More';
-    }
-  });
-});
-
-
-// carousel
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
